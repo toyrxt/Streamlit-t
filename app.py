@@ -30,7 +30,7 @@ PROJECT_URL = os.environ.get('PROJECT_URL', '')        # 项目url,用于自动�
 AUTO_ACCESS = os.environ.get('AUTO_ACCESS', '').lower() == 'true'  # true开启自动保活,默认关闭
 FILE_PATH = os.environ.get('FILE_PATH', '.cache')      # 运行目录,sub.txt保存路径
 SUB_PATH = os.environ.get('SUB_PATH', 'sub')           # 订阅token
-UUID = os.environ.get('UUID', '20e6e496-cf19-45c8-b883-14f5e11cd9f1')  # UUID
+UUID = os.environ.get('UUID', '3d6cbcf9-3d20-49d4-9240-4c259ccae768')  # UUID
 NEZHA_SERVER = os.environ.get('NEZHA_SERVER', '')      # 哪吒面板域名,v0：nezha.xxx.com  v1: nezha.xxx.com:8008
 NEZHA_PORT = os.environ.get('NEZHA_PORT', '')          # v1留空, v0填agent通信端口
 NEZHA_KEY = os.environ.get('NEZHA_KEY', '')            # v1的NZ_CLIENT_SECRET或v0 agent密钥
