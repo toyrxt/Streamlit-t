@@ -972,9 +972,11 @@ def stop_all(signum=None, frame=None):
 
 # =========================== 入口 ===========================
 if __name__ == '__main__':
-    signal.signal(signal.SIGINT, stop_all)
-    signal.signal(signal.SIGTERM, stop_all)
-
+    try:
+        signal.signal(signal.SIGINT, stop_all)
+        signal.signal(signal.SIGTERM, stop_all)
+    except (ValueError, OSError) as e:
+        print(f"Signal handler registration skipped: {e}")
     # 启动 HTTP 服务 (主线程)
     server = ThreadingHTTPServer(('0.0.0.0', PORT), RequestHandler)
 
